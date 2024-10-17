@@ -1,1 +1,67 @@
-<router-outlet></router-outlet>
+<div class="top-bar">
+  <div class="sidebar-interaction">
+    <span (click)="sidenav.toggle()">
+      @if(sidenav.opened){
+      <mat-icon>keyboard_arrow_down</mat-icon>
+      } @else {
+      <mat-icon>keyboard_arrow_right</mat-icon>
+      }
+    </span>
+  </div>
+  <div class="user-area">
+    <div class="user">
+      <mat-icon class="user--icon">person</mat-icon>
+      <span class="user--username"> Admin ADMIN </span>
+    </div>
+    <mat-icon>logout</mat-icon>
+  </div>
+</div>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened #sidenav>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <h3 matListItemTitle>bla</h3>
+        <p matListItemLine>
+          <span>blabla</span>
+          <span class="demo-2"> -- bluh</span>
+        </p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <h3 matListItemTitle>bla</h3>
+        <p matListItemLine>
+          <span>blabla</span>
+          <span class="demo-2"> -- bluh</span>
+        </p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <h3 matListItemTitle>bla</h3>
+        <p matListItemLine>
+          <span>blabla</span>
+          <span class="demo-2"> -- bluh</span>
+        </p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <h3 matListItemTitle>bla</h3>
+        <p matListItemLine>
+          <span>blabla</span>
+          <span class="demo-2"> -- bluh</span>
+        </p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <h3 matListItemTitle>bla</h3>
+        <p matListItemLine>
+          <span>blabla</span>
+          <span class="demo-2"> -- bluh</span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
